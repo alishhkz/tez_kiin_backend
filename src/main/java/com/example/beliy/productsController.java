@@ -24,8 +24,8 @@ public class productsController {
         return pR.findAllByCategory(category);
     }
     @PostMapping("/save")
-    public products/*ResponseEntity<String>*/ save(@RequestBody products p){
-      //  pR.save(p);
-        return pR.save(p); /*ResponseEntity.ok("product saved");*/
+    public ResponseEntity<String> save(@RequestBody products p){
+        pR.save(p);
+        return ResponseEntity.ok("product saved");
     }
 }
