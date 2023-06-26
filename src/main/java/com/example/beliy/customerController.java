@@ -18,7 +18,7 @@ import java.io.IOException;
 public class customerController {
     private customerRepository cR;
     private customerService cS;
-    @GetMapping("/getC")
+    @GetMapping("/login")
     public ResponseEntity<String> getC(@RequestParam("login") String login,
                                        @RequestParam("password") String password) throws IOException {
 
@@ -30,7 +30,7 @@ public class customerController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("User not found");
         }
     }
-    @PostMapping("/save")
+    @PostMapping("/reg")
     public users saveC(@RequestBody users c){
             return cR.save(c);
     }
