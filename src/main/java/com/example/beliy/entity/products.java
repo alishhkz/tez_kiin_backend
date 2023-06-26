@@ -14,7 +14,7 @@ public class products {
     private String size;
     private String details;
     private String colour;
-
+    private String images;
 
     public Long getId() {
         return id;
@@ -70,5 +70,12 @@ public class products {
 
     public void setColour(String colour) {
         this.colour = colour;
+    }
+       public String getImages() {
+        return images;
+    }
+
+    public void setImages(String images) {
+        this.images = images;
     }
 }
